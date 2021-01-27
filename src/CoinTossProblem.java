@@ -2,11 +2,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class CoinTossProblem {
-
-    private static boolean isInt(double a) {
-        return (a==Math.floor(a) && !Double.isInfinite(a));
-    }
-
     public static void main(String[] args ) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int mod3 = Integer.parseInt(br.readLine()) % 3;
