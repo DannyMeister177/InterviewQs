@@ -8,21 +8,9 @@ public class CoinTossProblem {
     }
 
     public static void main(String[] args ) throws Exception {
-
-        //BufferedReader
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int mod3 = Integer.parseInt(br.readLine()) % 3;
 
-        int n = Integer.parseInt(br.readLine());
-
-        // get log_2(N) and N%3
-        // double power = Math.log(n) / Math.log(2); 
-        int mod3 = n % 3;
-
-        // 
-        // if(isInt(power)){
-        //     System.out.println(1);
-        //     System.out.println(mod3);
-        // }
         if(mod3==0){
             System.out.println(2);
         }
