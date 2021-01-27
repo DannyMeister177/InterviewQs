@@ -2,7 +2,7 @@
 
 Repo to keep some of the problems I have been working on in Java for interview questions.
 
-## Problem Log
+## Problem List
 
 - Coin Toss Problem
     - Site: [Hackerearth.com](https://www.hackerearth.com/codearena/ring/3e5bd24/)
