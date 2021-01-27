@@ -1,3 +1,21 @@
+# Interview Questions Practice
+
+Repo to keep some of the problems I have been working on in Java for interview questions.
+
+## Problem Log
+
+- Coin Toss Problem
+    - Site: [Hackerearth.com](https://www.hackerearth.com/codearena/ring/3e5bd24/)
+    - Problem Statement File: [CoinTossProblem_Problem-Statement.md](https://github.com/DannyMeister177/InterviewQs/blob/master/src/CoinTossProblem_Problem-Statement.md)
+    - Code: [CoinTossProblem.java](https://github.com/DannyMeister177/InterviewQs/blob/master/src/CoinTossProblem.java)
+- Another Problem
+    - Site: 
+    - Problem Statement File: 
+    - Code: 
+
+
+
+<br/><br/><br/><br/><br/>
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
