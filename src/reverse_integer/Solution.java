@@ -11,7 +11,7 @@ class Solution {
             for(int i=xStr.length()-1; i>=0; i--){
                 var signedDigit = signFactor*Integer.parseInt(xStr.substring(i, i+1));
                 var powOfTen = Math.pow(10, i);
-                Math.addExact(xReversed, y);
+                Math.addExact(xReversed, signedDigit*powOfTen);
             }
         } catch (Exception arithmeticException) {
             return 0;
