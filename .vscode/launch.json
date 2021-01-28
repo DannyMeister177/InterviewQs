@@ -6,12 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "reverse_integer.Solution",
+            "projectName": "InterviewQs_e7d9b85e"
+        },
+        {
+            "type": "java",
             "name": "Launch with Arguments Prompt",
             "request": "launch",
             "mainClass": "",
             "args": "${command:SpecifyProgramArgs}"
         },
-
         {
             "type": "java",
             "name": "Launch Current File",
