@@ -2,29 +2,28 @@ package reverse_integer;
 
 class Solution {
     public static int reverse(int x) {
-        StringBuilder xStrBuilder = new StringBuilder(Integer.toString(x));
-        boolean isNegative = x<0;
-        if(isNegative) xStrBuilder.deleteCharAt(0);
-
-        // iterate through string representation of x in reverse order and
-        // append to xStrReverse
-        int length = xStrBuilder.length();
-        for(int i=0; i<length-1; i++){
-            xStrBuilder.insert(i, xStrBuilder.charAt(length-1));
-            xStrBuilder.deleteCharAt(length);
+        int xReversed = 0;
+        String xStr = Integer.toString(x);
+        try {
+            int signFactor = 1;
+            if(x<0) signFactor = -1;
+            
+            for(int i=xStr.length()-1; i>=0; i--){
+                var signedDigit = signFactor*Integer.parseInt(xStr.substring(i, i+1));
+                var powOfTen = Math.pow(10, i);
+                Math.addExact(xReversed, y);
+            }
+        } catch (Exception arithmeticException) {
+            return 0;
         }
-
-        if(!isNegative) {
-            return Integer.parseInt(xStrBuilder.toString());
-        }
-        else{
-            xStrBuilder.insert(0,"-");
-            return Integer.parseInt(xStrBuilder.toString());
-        }
+        return xReversed;
     }
 
     public static void main(String[] args){
-        // System.out.println(Integer.parseInt(args[0]));
-        System.out.println(Solution.reverse(Integer.parseInt(args[0])));
+        int x = Integer.parseInt(args[0]);
+        String xString = Integer.toString(x);
+        System.out.println(x);
+        System.out.println(xString);
+        // System.out.println(Solution.reverse(Integer.parseInt(args[0])));
     }
 }
