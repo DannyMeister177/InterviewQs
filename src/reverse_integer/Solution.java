@@ -6,24 +6,31 @@ class Solution {
         String xStr = Integer.toString(x);
         try {
             int signFactor = 1;
-            if(x<0) signFactor = -1;
-            
-            for(int i=xStr.length()-1; i>=0; i--){
-                var signedDigit = signFactor*Integer.parseInt(xStr.substring(i, i+1));
-                var powOfTen = Math.pow(10, i);
-                Math.addExact(xReversed, signedDigit*powOfTen);
+            if(x<0) {
+                signFactor = -1;
+                xStr = xStr.substring(1);
             }
-        } catch (Exception arithmeticException) {
+
+            for(int i=xStr.length()-1; i>=0; i--){
+                int signedDigit = signFactor*Integer.parseInt(xStr.substring(i, i+1));
+                int signedMagn = Math.multiplyExact(signedDigit, (int) Math.pow(10, i));
+                xReversed = Math.addExact(xReversed, signedMagn);
+            }
+        } catch (ArithmeticException  e) {
             return 0;
         }
         return xReversed;
     }
 
     public static void main(String[] args){
-        int x = Integer.parseInt(args[0]);
-        String xString = Integer.toString(x);
-        System.out.println(x);
-        System.out.println(xString);
-        // System.out.println(Solution.reverse(Integer.parseInt(args[0])));
+        System.out.println("x is: " + args[0]);
+        try {
+            Integer.parseInt(args[0]);
+            System.out.println(Solution.reverse(Integer.parseInt(args[0])));
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException thrown. ");
+            System.out.println("Let's see what reverse does...");
+            System.out.println(Solution.reverse(Integer.parseInt(args[0])));
+        }
     }
 }
