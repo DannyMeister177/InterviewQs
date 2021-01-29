@@ -19,7 +19,6 @@ class Solution {
         } catch (ArithmeticException  e) {
             return 0;
         }
-        return xReversed;
     }
 
     public static void main(String[] args){
