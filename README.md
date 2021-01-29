@@ -8,10 +8,10 @@ Repo to keep some of the problems I have been working on in Java for interview q
     - Site: [Hackerearth.com](https://www.hackerearth.com/codearena/ring/3e5bd24/)
     - Problem Statement File: [CoinTossProblem_Problem-Statement.md](https://github.com/DannyMeister177/InterviewQs/blob/master/src/CoinTossProblem_Problem-Statement.md)
     - Code: [CoinTossProblem.java](https://github.com/DannyMeister177/InterviewQs/blob/master/src/CoinTossProblem.java)
-- Reverse Int32 Problem
-    - Site: [LeetCode.com](https://leetcode.com/problems/reverse-integer/)
-    - Problem Statement File: [ReverseInteger_ProblemStatement.md](https://github.com/DannyMeister177/InterviewQs/blob/master/Problem_Statements/ReverseInteger_ProblemStatement.md)
-    - Code: [Solution.java](https://github.com/DannyMeister177/InterviewQs/blob/master/src/reverse_integer/Solution.java)
+- Another Problem
+    - Site: 
+    - Problem Statement File: 
+    - Code: 
 
 
 
