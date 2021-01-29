@@ -15,7 +15,7 @@
             "type": "java",
             "name": "Launch with Arguments Prompt",
             "request": "launch",
-            "mainClass": "",
+            "mainClass": "${file}",
             "args": "${command:SpecifyProgramArgs}"
         },
         {
