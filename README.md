@@ -13,3 +13,6 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Reverse Integer
     - Site: [LeetCode.com](https://leetcode.com/problems/reverse-integer/)
     - Code: [`reverse_integer`](src/reverse_integer)
+- Palindrome Number
+    - Site: [LeetCode.com](https://leetcode.com/problems/palindrome-number/)
+    - Code: [`palindrome_number`](src/palindrome_number)
