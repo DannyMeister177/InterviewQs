@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Solution",
             "request": "launch",
+            "mainClass": "palindrome_number.Solution",
+            "projectName": "InterviewQs_e7d9b85e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
             "mainClass": "reverse_integer.Solution",
             "projectName": "InterviewQs_e7d9b85e"
         },
