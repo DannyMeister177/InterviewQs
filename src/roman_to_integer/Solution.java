@@ -6,6 +6,27 @@ import java.util.stream.IntStream;
 
 class Solution {
 
+    private static HashMap<String, Integer> map = new HashMap<>(13); 
+    static {
+        map.put("I", 1);
+        map.put("V", 5);
+        map.put("X", 10);
+        map.put("L", 50);
+        map.put("C", 100);
+        map.put("D", 500);
+        map.put("M", 1000);
+        map.put("IV", 4);
+        map.put("IX", 9);
+        map.put("XL", 40);
+        map.put("XC", 90);
+        map.put("CD", 400);
+        map.put("CM", 900);
+        // the next few mappings are to simplify the code below
+        map.put("II", 2);
+        map.put("XX", 20);
+        map.put("CC", 200);
+    }
+
     interface LambdaFunc{
         int run(String xx, int i);
     }
@@ -16,29 +37,9 @@ class Solution {
         */
         int len = s.length();
         int[] intArr = new int[len];
-        HashMap<String, Integer> map = new HashMap<>(13); 
-        // fill hashmap with roman numeral to int mappings
-        {
-            map.put("I", 1);
-            map.put("V", 5);
-            map.put("X", 10);
-            map.put("L", 50);
-            map.put("C", 100);
-            map.put("D", 500);
-            map.put("M", 1000);
-            map.put("IV", 4);
-            map.put("IX", 9);
-            map.put("XL", 40);
-            map.put("XC", 90);
-            map.put("CD", 400);
-            map.put("CM", 900);
-            // the next few mappings are to simplify the code below
-            map.put("II", 2);
-            map.put("XX", 20);
-            map.put("CC", 200);
-        }
 
-        // len >=3 init a pattern and matcher
+        // init a pattern to minimize number of pattern objects created from subsequent
+        // calls to xxToInt in for loop below.
         Pattern p = Pattern.compile("[IXC]");
 
         // helper lambda function
@@ -59,7 +60,8 @@ class Solution {
         };
 
         // cycle through string s looking at 3 letters at a time
-        for(int i=0; i<len;){
+        int i=0;
+        while(i<len){
             // check if we're at last remaining substring of length=1
             if(len-i == 1){
                 intArr[i] = map.get(s.substring(i,i+1));
