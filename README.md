@@ -16,3 +16,6 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Palindrome Number
     - Site: [LeetCode.com](https://leetcode.com/problems/palindrome-number/)
     - Code: [`palindrome_number`](src/palindrome_number)
+- Roman to Integer
+    - Site: [LeetCode.com](https://leetcode.com/problems/roman-to-integer/)
+    - Code: [`palindrome_number`](src/roman_to_integer)
