@@ -18,4 +18,4 @@ Repo to keep some of the problems I have been working on in Java for interview q
     - Code: [`palindrome_number`](src/palindrome_number)
 - Roman to Integer
     - Site: [LeetCode.com](https://leetcode.com/problems/roman-to-integer/)
-    - Code: [`palindrome_number`](src/roman_to_integer)
+    - Code: [`roman_to_integer`](src/roman_to_integer)
