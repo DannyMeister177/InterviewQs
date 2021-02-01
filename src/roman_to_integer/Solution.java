@@ -39,7 +39,7 @@ class Solution {
         int[] intArr = new int[len];
 
         // init a pattern to minimize number of pattern objects created from subsequent
-        // calls to xxToInt in for loop below.
+        // calls to xxToInt in loop below.
         Pattern p = Pattern.compile("[IXC]");
 
         // helper lambda function
