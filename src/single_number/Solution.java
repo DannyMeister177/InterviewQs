@@ -36,7 +36,7 @@ public class Solution {
      * <br/><br/>
      * a⊕a=0
      * <br/><br/>
-     * a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+     * a⊕b⊕a = (a⊕a)⊕b = 0⊕b = b
      * <br/><br/>
      * So we can XOR all bits together to find the unique number.
      * @param nums array of ints where each int appears twice except one
