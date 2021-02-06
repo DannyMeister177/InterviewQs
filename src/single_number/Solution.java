@@ -1,5 +1,6 @@
 package single_number;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Solution {
@@ -20,11 +21,8 @@ public class Solution {
             }
         }
 
-        for (Integer i : hm.keySet()) {
-            return i;
-        }
-
-        return -1;
+        if(!hm.keySet().isEmpty()) return (int) hm.keySet().toArray()[0];
+        else return -1;
     }
 
     /**
@@ -38,8 +36,24 @@ public class Solution {
     }
 
     public static void main(String[] args){
-        System.out.println("hello world");
-        System.out.println("Getting single number from array:");
-        System.out.println(Solution.singleNumberHashMap(new int[] {5, 10, 2, 10, 5, 4, 2, 4}));
+        int[] arr = new int[args.length];
+
+        if(arr.length==0){
+            System.out.println("\n\nPlease add a list of ints as command line arguments " 
+                + "to run this program. Sample command:\n\n"
+                + "java Solution.java 1 2 3 3 2 1 4");
+            System.out.println("\n");
+            System.exit(0);
+        }
+
+        for(int i=0; i<args.length; i++){
+            arr[i] = Integer.parseInt(args[i]);
+        }
+        
+        System.out.print("\nArray is ");
+        System.out.println(Arrays.toString(arr)+"\n");
+        System.out.print("Single number from array: ");
+        System.out.println(Solution.singleNumberHashMap(arr));
+        System.out.println("\n");
     }
 }
