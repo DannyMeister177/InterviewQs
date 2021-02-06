@@ -19,3 +19,7 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Roman to Integer
     - Site: [LeetCode.com](https://leetcode.com/problems/roman-to-integer/)
     - Code: [`roman_to_integer`](src/roman_to_integer)
+- Single Number
+    - Site: [LeetCode.com](https://leetcode.com/problems/single-number/)
+    - Code: [`single_number`](src/single_number)
+
