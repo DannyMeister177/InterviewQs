@@ -26,21 +26,38 @@ public class Solution {
     }
 
     /**
-     * This method hopefully won't use any extra memory
+     * This method won't use extra memory by using bitwise operations.
+     * <br/><br/>
+     * If we take XOR of zero and some bit, it will return that bit
+     * <br/><br/>
+     * a⊕0 = a, a⊕0=a
+     * <br/><br/>
+     * If we take XOR of two same bits, it will return 0
+     * <br/><br/>
+     * a⊕a=0
+     * <br/><br/>
+     * a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+     * <br/><br/>
+     * So we can XOR all bits together to find the unique number.
      * @param nums array of ints where each int appears twice except one
      * @return single int appearing only once
      */
     public static int singleNumber(int[] nums) {
+        int a = 0;
         
-        return -1;
+        for(int i: nums){
+            a ^= i;
+        }
+        return a;
     }
 
     public static void main(String[] args){
         int[] arr = new int[args.length];
 
         if(arr.length==0){
-            System.out.println("\n\nPlease add a list of ints as command line arguments " 
-                + "to run this program. Sample command:\n\n"
+            System.out.println("\n\nPlease add a list of ints "
+                + "as command line arguments " 
+                + "to run this program.\n\nSample command: "
                 + "java Solution.java 1 2 3 3 2 1 4");
             System.out.println("\n");
             System.exit(0);
@@ -53,7 +70,7 @@ public class Solution {
         System.out.print("\nArray is ");
         System.out.println(Arrays.toString(arr)+"\n");
         System.out.print("Single number from array: ");
-        System.out.println(Solution.singleNumberHashMap(arr));
+        System.out.println(Solution.singleNumber(arr));
         System.out.println("\n");
     }
 }
