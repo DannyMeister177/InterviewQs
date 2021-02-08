@@ -24,5 +24,7 @@ Repo to keep some of the problems I have been working on in Java for interview q
     - Code: [`single_number`](src/single_number)
 - Single Number II
     - Site: [LeetCode.com](https://leetcode.com/problems/single-number-ii/)
-    - Code: [`single_number_2`](src/single_number_2)
-
+    - Code: [`single_number_ii`](src/single_number_ii)
+- Single Number III
+    - Site: [LeetCode.com](https://leetcode.com/problems/single-number-iii/)
+    - Code: [`single_number_iii`](src/single_number_iii)

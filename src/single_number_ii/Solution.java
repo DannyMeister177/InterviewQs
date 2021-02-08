@@ -1,4 +1,4 @@
-package single_number_2;
+package single_number_ii;
 
 import java.util.Arrays;
 import java.util.HashMap;
