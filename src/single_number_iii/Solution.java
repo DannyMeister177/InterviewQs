@@ -11,40 +11,44 @@ public class Solution {
      * @param nums array of ints where each int appears thrice except one
      * @return single int appearing only once
      */
-    public static int singleNumber(int[] nums) {
-        HashMap<Integer, Integer> hm = new HashMap<>((nums.length / 2) + 1);
-
-        // iterate through nums array and store each unique int as a key mapped to the
-        // count
-        // of how many times it is stored in the array nums
-        for (int i = 0; i < nums.length; i++) {
-            if (hm.containsKey(nums[i])) {
-                hm.put(nums[i], hm.get(nums[i]) + 1);
-            } else {
-                hm.put(nums[i], 1);
-            }
-        }
-
-        for (Entry<Integer, Integer> entry : hm.entrySet()) {
-            if(entry.getValue() < 3) return entry.getKey();
-        }
-
-        return -1;
+    public static int[] singleNumber(int[] nums) {
+        
+        return new int[2];
     }
 
     /**
-     * This method won't use extra memory.  
+     * This method won't use extra memory. It will solve this by sorting and thus is
+     * N*Log(N) time complexity.
      * @param nums array of ints where each int appears thrice except one
      * @return single int appearing only once
      */
-    public static int singleNumberNoXtraMemory(int[] nums) {
-        int ones = 0;
-        int twos = 0;
-        for (int value : nums) {
-            ones = (ones ^ value) & ~twos;
-            twos = (twos ^ value) & ~ones;
+    public static int[] singleNumberNoXtraMemory(int[] nums) {
+        int[] ans = new int[2];
+
+        // first get XOR(nums)
+        int numsXOR = 0;
+        for(int i=0; i<nums.length; i++){
+            numsXOR ^= nums[i];
         }
-        return ones;
+
+        int a = nums[0];
+        int b = nums[1];
+        for(int i=2; i<nums.length; i++){
+            i =1;
+        }
+
+        return ans;
+    }
+
+    /**
+     * This solution should use constant space and linear time complexity. Will probably
+     * use some sort of bitwise manipulation.
+     * @param nums
+     * @return
+     */
+    public static int[] singleNumberConstSpaceLinearTime(int[] nums){
+        // TODO: find this solution which probably involves bitwise ops.
+        return 0;
     }
 
     public static void main(String[] args){
