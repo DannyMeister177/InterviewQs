@@ -2,7 +2,6 @@ package single_number_iii;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map.Entry;
 
 public class Solution {
     /**
@@ -12,29 +11,41 @@ public class Solution {
      * @return single int appearing only once
      */
     public static int[] singleNumber(int[] nums) {
-        
-        return new int[2];
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        int[] ans = new int[2];
+
+        for (int i : nums) {
+            if(hm.containsKey(i)) hm.remove(i);
+            else hm.put(i, 1);
+        }
+
+        int count = 0;
+        for (Integer i : hm.keySet()) {
+            ans[count++] = i;
+        }
+        return ans;
     }
 
     /**
-     * This method won't use extra memory. It will solve this by sorting and thus is
-     * N*Log(N) time complexity.
+     * This method  will solve this by sorting and thus is N*Log(N) time complexity.
      * @param nums array of ints where each int appears thrice except one
      * @return single int appearing only once
      */
     public static int[] singleNumberNoXtraMemory(int[] nums) {
         int[] ans = new int[2];
 
-        // first get XOR(nums)
-        int numsXOR = 0;
-        for(int i=0; i<nums.length; i++){
-            numsXOR ^= nums[i];
-        }
+        int[] numsSorted = nums.clone();
+        Arrays.sort(numsSorted);
 
-        int a = nums[0];
-        int b = nums[1];
-        for(int i=2; i<nums.length; i++){
-            i =1;
+        int n = nums.length;
+        int ansIndex = 0;
+        int curr=0;
+        while(curr<n){
+            if (curr == n - 1) ans[ansIndex] = numsSorted[curr++];
+            else if(numsSorted[curr] != numsSorted[curr+1]) {
+                ans[ansIndex++] = numsSorted[curr++];
+            }
+            else curr += 2;
         }
 
         return ans;
@@ -48,7 +59,8 @@ public class Solution {
      */
     public static int[] singleNumberConstSpaceLinearTime(int[] nums){
         // TODO: find this solution which probably involves bitwise ops.
-        return 0;
+        int[] ans = new int[2];
+        return ans;
     }
 
     public static void main(String[] args){
@@ -57,10 +69,10 @@ public class Solution {
         if(arr.length==0){
             System.out.println("\n\nPlease add a list of ints "
                 + "as command line arguments " 
-                + "to run this program. \nAll values should appear exactly 3 times "
-                + "except one value, which should appear exactly once."
+                + "to run this program. \nAll values should appear exactly 2 times "
+                + "except two values, which should appear exactly once each."
                 +"\n\nSample command: "
-                + "java Solution.java 1 1 2 3 3 2 1 3 4 2");
+                + "java Solution.java 1 1 2 3 3 5 4 2");
             System.out.println("\n");
             System.exit(0);
         }
@@ -71,8 +83,8 @@ public class Solution {
         
         System.out.print("\nArray is ");
         System.out.println(Arrays.toString(arr)+"\n");
-        System.out.print("Single number from array: ");
-        System.out.println(Solution.singleNumberNoXtraMemory(arr));
+        System.out.print("Single numbers from array: ");
+        System.out.println(Arrays.toString(singleNumberNoXtraMemory(arr)));
         System.out.println("\n");
     }
 }
