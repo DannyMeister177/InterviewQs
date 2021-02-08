@@ -38,12 +38,13 @@ public class Solution {
      * @return single int appearing only once
      */
     public static int singleNumberNoXtraMemory(int[] nums) {
-        int a = 0;
-        
-        for(int i: nums){
-            a ^= i;
+        int ones = 0;
+        int twos = 0;
+        for (int value : nums) {
+            ones = (ones ^ value) & ~twos;
+            twos = (twos ^ value) & ~ones;
         }
-        return a;
+        return ones;
     }
 
     public static void main(String[] args){
@@ -67,7 +68,7 @@ public class Solution {
         System.out.print("\nArray is ");
         System.out.println(Arrays.toString(arr)+"\n");
         System.out.print("Single number from array: ");
-        System.out.println(Solution.singleNumber(arr));
+        System.out.println(Solution.singleNumberNoXtraMemory(arr));
         System.out.println("\n");
     }
 }
