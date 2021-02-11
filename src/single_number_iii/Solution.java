@@ -7,8 +7,8 @@ public class Solution {
     /**
      * This method uses extra memory since it uses a hashmap
      * 
-     * @param nums array of ints where each int appears thrice except one
-     * @return single int appearing only once
+     * @param nums array of ints where each int appears twice except two
+     * @return array of two ints appearing each only once
      */
     public static int[] singleNumber(int[] nums) {
         HashMap<Integer, Integer> hm = new HashMap<>();
@@ -28,8 +28,8 @@ public class Solution {
 
     /**
      * This method  will solve this by sorting and thus is N*Log(N) time complexity.
-     * @param nums array of ints where each int appears thrice except one
-     * @return single int appearing only once
+     * @param nums array of ints where each int appears twice except two
+     * @return array of two ints appearing each only once
      */
     public static int[] singleNumberNoXtraMemory(int[] nums) {
         int[] ans = new int[2];
@@ -52,15 +52,37 @@ public class Solution {
     }
 
     /**
-     * This solution should use constant space and linear time complexity. Will probably
-     * use some sort of bitwise manipulation.
-     * @param nums
-     * @return
+     * This solution should use constant space and linear time complexity. It uses bit
+     * masking and bitwise XOR ops to find the two ints appearing each once.
+     * @param nums array of ints where each int appears twice except two
+     * @return array of two ints appearing each only once
      */
     public static int[] singleNumberConstSpaceLinearTime(int[] nums){
-        // TODO: find this solution which probably involves bitwise ops.
-        int[] ans = new int[2];
-        return ans;
+        
+        // first get XOR of nums
+        int xor = 0;
+        for (int i : nums) {
+            xor ^= i;
+        }
+
+        // now need to get mask where single bit is 1
+        int mask = 1;
+        while((mask&xor) == 0){
+            mask <<= 1;
+        }
+
+        // Divide nums up into all integers that have a 1 bit in the position defined by 
+        // mask and xor them all to get j which is first unique int to be returned. 
+        // The second group would have 0 in this same position defined by mask and the xor 
+        // of all these would yield k, the second unique number to return.
+        int j = 0;
+        int k = 0;
+        for (int i : nums) {
+            if((mask&i) == 0) j ^= i;
+            else k ^= i;
+        }
+
+        return new int[]{j, k};
     }
 
     public static void main(String[] args){
@@ -84,7 +106,7 @@ public class Solution {
         System.out.print("\nArray is ");
         System.out.println(Arrays.toString(arr)+"\n");
         System.out.print("Single numbers from array: ");
-        System.out.println(Arrays.toString(singleNumberNoXtraMemory(arr)));
+        System.out.println(Arrays.toString(singleNumberConstSpaceLinearTime(arr)));
         System.out.println("\n");
     }
 }

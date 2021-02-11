@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "palindrome_number.Solution",
-            "projectName": "InterviewQs_e7d9b85e"
-        },
-        {
-            "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "reverse_integer.Solution",
-            "projectName": "InterviewQs_e7d9b85e"
-        },
-        {
-            "type": "java",
             "name": "Launch with Arguments Prompt",
             "request": "launch",
             "mainClass": "${file}",
@@ -30,13 +16,6 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch CoinTossProblem",
-            "request": "launch",
-            "mainClass": "CoinTossProblem",
-            "projectName": "InterviewQs_e7d9b85e"
         }
     ]
 }
