@@ -31,3 +31,6 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Power of Two
     - Site: [LeetCode.com](https://leetcode.com/problems/power-of-two/)
     - Code: [`power_of_two`](src/power_of_two)
+- FizzBuzz
+    - Site: [LeetCode.com](https://leetcode.com/problems/fizz-buzz/)
+    - Code: [`fizz_buzz`](src/fizz_buzz)
