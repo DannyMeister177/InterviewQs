@@ -22,7 +22,7 @@ class Solution {
     }
     
     public static boolean isPowerOfTwo(int n) {
-        return (n&(n-1))==0 && n>0 ;
+        return n>0 && (n&(n-1))==0;
     }
 
     public static void main(String[] args){
