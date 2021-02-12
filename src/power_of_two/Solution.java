@@ -1,7 +1,7 @@
 package power_of_two;
 
 class Solution {
-    public static boolean isPowerOfTwo(int n) {
+    public static boolean isPowerOfTwoConvoluted(int n) {
         // first take care of a few edge cases for performance and to simplify code below
         if (n == 1 || n == 1073741824) 
             return true;
@@ -19,6 +19,10 @@ class Solution {
         }
 
         return bitCount==1;
+    }
+    
+    public static boolean isPowerOfTwo(int n) {
+        return (n&(n-1))==0 && n>0 ;
     }
 
     public static void main(String[] args){
