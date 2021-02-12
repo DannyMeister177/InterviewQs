@@ -10,19 +10,10 @@ class Solution {
         for(int i=1; i<=n; i++){
             boolean multipleOf3 = i%3==0;
             boolean multipleOf5 = i%5==0;
-            if(multipleOf3 && multipleOf5) {
-                ans.add("FizzBuzz");
-                continue;
-            }
-            if(multipleOf3) { 
-                ans.add("Fizz");
-                continue;
-            }
-            if(multipleOf5) { 
-                ans.add("Buzz");
-                continue;
-            }
-            ans.add(Integer.toString(i));
+            if(multipleOf3 && multipleOf5) ans.add("FizzBuzz");
+            else if(multipleOf3) ans.add("Fizz");
+            else if (multipleOf5) ans.add("Buzz");
+            else ans.add(Integer.toString(i));
         }
 
         return ans;
