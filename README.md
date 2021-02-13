@@ -37,3 +37,6 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Baseball Game
     - Site: [LeetCode.com](https://leetcode.com/problems/baseball-game/)
     - Code: [`baseball_game`](src/baseball_game)
+- Palindrome Linked List
+    - Site: [LeetCode.com](https://leetcode.com/problems/palindrome-linked-list/)
+    - Code: [`palindrome_linked_list`](src/palindrome_linked_list)

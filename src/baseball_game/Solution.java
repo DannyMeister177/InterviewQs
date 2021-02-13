@@ -20,10 +20,9 @@ class Solution {
             }
             else stack.push(Integer.parseInt(s));
         }
+        
         int sum = 0;
-        for (int i : stack) {
-            sum += i;
-        }
+        for (int score : stack) sum += score;
 
         return sum;
     }
