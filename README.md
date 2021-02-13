@@ -34,3 +34,6 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - FizzBuzz
     - Site: [LeetCode.com](https://leetcode.com/problems/fizz-buzz/)
     - Code: [`fizz_buzz`](src/fizz_buzz)
+- Baseball Game
+    - Site: [LeetCode.com](https://leetcode.com/problems/baseball-game/)
+    - Code: [`baseball_game`](src/baseball_game)
