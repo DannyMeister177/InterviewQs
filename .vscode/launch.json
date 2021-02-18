@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Solution",
             "request": "launch",
+            "mainClass": "src.palindromelinkedlist.Solution",
+            "projectName": "InterviewQs_a657338a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
             "mainClass": "Solution",
             "projectName": "InterviewQs_a657338a"
         },

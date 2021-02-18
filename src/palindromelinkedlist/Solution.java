@@ -1,21 +1,49 @@
 package src.palindromelinkedlist;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class Solution {
+    /**
+     * This method uses memory O(n) since it fills a stack with values of linked list
+     * to then compare each item in list to stack.
+     * @param head of linked list to evaluate
+     * @return true of linked list evaluated is palindrome
+     */
     public static boolean isPalindrome(ListNode head) {
-        return false;
+        Deque<Integer> stack = new ArrayDeque<>();
+        ListNode current = head;
+        int size = 0;
+
+        while(current != null){
+            size++;
+            stack.push(current.val);
+            current = current.next;
+        }
+
+        current = head;
+
+        for(int i=0; i<size/2; i++){
+            if(current.val != stack.pop()) return false;
+            else current = current.next;
+        }
+
+        // if exited loop, must mean each int equals opposite int so is
+        return true;
     }
 
     public static void main(String[] args){
-        int first = Integer.parseInt(args[args.length-1]);
-        int next = Integer.parseInt(args[args.length-2]);
-        ListNode curr = new ListNode(first, new ListNode(next));
+        int first = Integer.parseInt(args[0]);
+        int next = Integer.parseInt(args[1]);
+        ListNode head = new ListNode(first, new ListNode(next));
+        ListNode curr = head;
 
-        for(int i=args.length-3; i>=0; i--){
+        for(int i=2; i<args.length; i++){
             curr.next.next = new ListNode(Integer.parseInt(args[i]));
             curr = curr.next;
         }
 
-        System.out.println(isPalindrome(curr));
-        System.out.println("hello world");
+        System.out.println("head: "+head.val);
+        System.out.println(isPalindrome(head));
     }
 }
