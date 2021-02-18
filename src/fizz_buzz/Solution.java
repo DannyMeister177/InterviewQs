@@ -1,4 +1,4 @@
-package fizz_buzz;
+package src.fizz_buzz;
 
 import java.util.ArrayList;
 import java.util.List;

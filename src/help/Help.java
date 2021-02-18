@@ -1,4 +1,4 @@
-package help;
+package src.help;
 
 public class Help {
 

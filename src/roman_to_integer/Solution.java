@@ -1,4 +1,4 @@
-package roman_to_integer;
+package src.roman_to_integer;
 
 import java.util.HashMap;
 import java.util.regex.Pattern;

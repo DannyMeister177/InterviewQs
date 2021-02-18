@@ -1,4 +1,4 @@
-package power_of_two;
+package src.power_of_two;
 
 class Solution {
     public static boolean isPowerOfTwoConvoluted(int n) {

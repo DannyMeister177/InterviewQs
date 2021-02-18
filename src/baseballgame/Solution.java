@@ -1,4 +1,4 @@
-package baseballgame;
+package src.baseballgame;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

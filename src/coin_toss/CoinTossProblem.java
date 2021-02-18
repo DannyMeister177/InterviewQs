@@ -1,4 +1,4 @@
-package coin_toss;
+package src.coin_toss;
 
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package reverse_integer;
+package src.reverse_integer;
 
 class Solution {
     public static int reverse(int x) {
