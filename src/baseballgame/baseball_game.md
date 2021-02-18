@@ -1,4 +1,4 @@
-## 682. Baseball Game
+# 682. Baseball Game
 
 You are keeping score for a baseball game with strange rules. The game consists of several rounds, where the scores of past rounds may affect future rounds' scores.
 
@@ -11,7 +11,7 @@ At the beginning of the game, you start with an empty record. You are given a li
   
 Return *the sum of all the scores on the record.*
 
-### **Example 1:**  
+## **Example 1:**  
 
     Input: ops = ["5","2","C","D","+"]
     Output: 30
@@ -23,7 +23,7 @@ Return *the sum of all the scores on the record.*
     "+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
     The total sum is 5 + 10 + 15 = 30.
 
-### **Example 2:**  
+## **Example 2:**  
 
     Input: ops = ["5","-2","4","C","D","9","+","+"]
     Output: 27
@@ -38,12 +38,12 @@ Return *the sum of all the scores on the record.*
     "+" - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].
     The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
 
-### **Example 3:**  
+## **Example 3:**  
 
     Input: ops = ["1"]
     Output: 1  
 
-### **Constraints:**
+## **Constraints:**
 
 * `1 <= ops.length <= 1000`
 * `ops[i]` is `"C"`, `"D"`, `"+"`, or a string representing an integer in the range `[-3 * 10^4, 3 * 10^4]`.

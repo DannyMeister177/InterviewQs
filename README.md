@@ -21,7 +21,7 @@ Repo to keep some of the problems I have been working on in Java for interview q
     - Code: [`roman_to_integer`](src/roman_to_integer)
 - Single Number
     - Site: [LeetCode.com](https://leetcode.com/problems/single-number/)
-    - Code: [`single_number`](src/single_number)
+    - Code: [`singlenumber`](src/singlenumber)
 - Single Number II
     - Site: [LeetCode.com](https://leetcode.com/problems/single-number-ii/)
     - Code: [`single_number_ii`](src/single_number_ii)
@@ -36,7 +36,7 @@ Repo to keep some of the problems I have been working on in Java for interview q
     - Code: [`fizz_buzz`](src/fizz_buzz)
 - Baseball Game
     - Site: [LeetCode.com](https://leetcode.com/problems/baseball-game/)
-    - Code: [`baseball_game`](src/baseball_game)
+    - Code: [`baseballgame`](src/baseballgame)
 - Palindrome Linked List
     - Site: [LeetCode.com](https://leetcode.com/problems/palindrome-linked-list/)
-    - Code: [`palindrome_linked_list`](src/palindrome_linked_list)
+    - Code: [`palindromelinkedlist`](src/palindromelinkedlist)
