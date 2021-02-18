@@ -13,16 +13,18 @@ public class Solution {
     public static boolean isPalindrome(ListNode head) {
         Deque<Integer> stack = new ArrayDeque<>();
         ListNode current = head;
-        int size = 0;
 
+        // get size of linked list
+        int size = 0;
         while(current != null){
             size++;
             stack.push(current.val);
             current = current.next;
         }
 
+        // now compare each item in list to each value in stack and if not equal, this
+        // is not a palindrome.
         current = head;
-
         for(int i=0; i<size/2; i++){
             if(current.val != stack.pop()) return false;
             else current = current.next;
