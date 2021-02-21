@@ -40,6 +40,9 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Palindrome Linked List
   - Site: [LeetCode.com](https://leetcode.com/problems/palindrome-linked-list/)
   - Code: [`palindromelinkedlist`](src/palindromelinkedlist)
-- Palindrome Linked List
+- Expressive Words
   - Site: [LeetCode.com](https://leetcode.com/problems/expressive-words/)
   - Code: [`expressivewords`](src/expressivewords)
+- Longest Palindromic Substring
+  - Site: [LeetCode.com](https://leetcode.com/problems/longest-palindromic-substring/)
+  - Code: [`longestpalindromicsubstring`](src/longestpalindromicsubstring)
