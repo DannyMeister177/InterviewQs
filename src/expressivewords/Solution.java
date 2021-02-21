@@ -4,30 +4,61 @@ import java.util.Arrays;
 
 public class Solution {
 
-    public static int expressiveWords(String S, String[] words) {
-        return 0;
-    }
-     
+    public static int expressiveWords(String s, String[] words) {
+        int stretchyCount = 0;
 
+        // first find regex pattern that will be used to test each word in words
+        // on whether its is stretchy or not.
+        StringBuilder regexBuilder = new StringBuilder("");
+        int start = 0;
+        int end = 1;
+        while(end<=s.length()){
+            if(end<s.length() && s.charAt(start) == s.charAt(end)) {
+                end++;
+            }
+            else if(end - start >= 3) {
+                regexBuilder.append("[" + s.charAt(start) + "]{1,");
+                regexBuilder.append((end - start) + "}+");
+                start = end;
+                end++;
+            }
+            else {
+                regexBuilder.append(s.substring(start, end));
+                start = end;
+                end++;
+            }
+        }
+
+        String stretchyRegex = regexBuilder.toString();
+        // now iterate through each word in words[] and count number of stretchy words
+        for (String string : words) {
+            if(string.matches(stretchyRegex)) stretchyCount++;
+        }
+
+        return stretchyCount;
+    }
 
     public static void main(String[] args){
-
+ 
         if(args.length==0){
-            System.out.println("\n\nPlease add a list of ints "
+            System.out.println("\n\nPlease add a list of strings "
                 + "as command line arguments " 
                 + "to run this program.\n\nSample command: "
-                + "java Solution.java 1 2 3 3 2 1 4");
+                + "java Solution.java helllooo helo hello");
             System.out.println("\n");
             System.exit(0);
         }
 
-        String s = args[0];
-        String[] arr = Arrays.copyOfRange(args, 1, args.length-1);
+        String sTest = args[0];
+        String[] wordsTest = Arrays.copyOfRange(args, 1, args.length);
         
+        System.out.print("\nString is ");
+        System.out.println(sTest+"\n\n");
         System.out.print("\nArray is ");
-        System.out.println(Arrays.toString(arr)+"\n");
-        System.out.print("# of Expressive Words from array: ");
-        System.out.println(Solution.expressiveWords(s, arr));
+        System.out.println(Arrays.toString(wordsTest)+"\n");
+
+        System.out.print("Number of Stretchy strings: ");
+        System.out.println(expressiveWords(sTest, wordsTest));
         System.out.println("\n");
     }
 }
