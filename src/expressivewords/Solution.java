@@ -41,9 +41,7 @@ public class Solution {
     public static void main(String[] args){
  
         if(args.length==0){
-            System.out.println("\n\nPlease add a list of strings "
-                + "as command line arguments " 
-                + "to run this program.\n\nSample command: "
+            System.out.println("\n\nSample command line args: "
                 + "java Solution.java helllooo helo hello");
             System.out.println("\n");
             System.exit(0);
