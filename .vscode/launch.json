@@ -6,27 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "src.palindromelinkedlist.Solution",
-            "projectName": "InterviewQs_a657338a"
-        },
-        {
-            "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "Solution",
-            "projectName": "InterviewQs_a657338a"
-        },
-        {
-            "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "baseball_game.Solution",
-            "projectName": "InterviewQs_e7d9b85e"
-        },
-        {
-            "type": "java",
             "name": "Launch with Arguments Prompt",
             "request": "launch",
             "mainClass": "${file}",
