@@ -3,10 +3,11 @@ package src.longestpalindromicsubstring;
 public class Solution {
     public static String longestPalindrome(String s) {
         int subStrSize = s.length();
-        while(subStrSize > 1){
-            for(int i=0; i+subStrSize<=s.length(); i++){
-                String subStr = s.substring(i, i+subStrSize);
-                if(isPalindrome(subStr)) return subStr;
+        while (subStrSize > 1) {
+            for (int i = 0; i + subStrSize <= s.length(); i++) {
+                String subStr = s.substring(i, i + subStrSize);
+                if (isPalindrome(subStr))
+                    return subStr;
             }
             subStrSize--;
         }
@@ -18,18 +19,22 @@ public class Solution {
     private static boolean isPalindrome(String s) {
         int head = 0;
         int tail = s.length() - 1;
-        while(head<tail){
-            if(s.charAt(head) != s.charAt(tail)) return false;
-            else {head++; tail--;}
+        while (head < tail) {
+            if (s.charAt(head) != s.charAt(tail))
+                return false;
+            else {
+                head++;
+                tail--;
+            }
         }
         // if code reaches here, all chars equal their counterpart so s is a palindrome
         return true;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         for (String string : args) {
-            System.out.print("String: "+string+" has longest palindromic substring: ");
+            System.out.print("String: " + string + " has longest palindromic substring: ");
             System.out.println(longestPalindrome(string));
-        }      
+        }
     }
 }
