@@ -46,3 +46,9 @@ Repo to keep some of the problems I have been working on in Java for interview q
 - Longest Palindromic Substring
   - Site: [LeetCode.com](https://leetcode.com/problems/longest-palindromic-substring/)
   - Code: [`longestpalindromicsubstring`](src/longestpalindromicsubstring)
+- Broken Calculator
+  - Site: [LeetCode.com](https://leetcode.com/problems/broken-calculator/)
+  - Code: [`brokencalculator`](src/brokencalculator)
+- Find the Distance Value Between Two Arrays
+  - Site: [LeetCode.com](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/)
+  - Code: [`find_distance_value_between_two_arrays`](src/find_distance_value_between_two_arrays)
