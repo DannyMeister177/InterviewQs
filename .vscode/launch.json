@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Solution",
-            "request": "launch",
-            "mainClass": "src.find_distance_value_between_two_arrays.Solution",
-            "projectName": "InterviewQs_a657338a"
-        },
-        {
-            "type": "java",
             "name": "Launch with Arguments Prompt",
             "request": "launch",
             "mainClass": "${file}",
