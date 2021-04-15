@@ -54,4 +54,4 @@ Repo to keep some of the problems I have been working on in Java for interview q
   - Code: [`find_distance_value_between_two_arrays`](src/find_distance_value_between_two_arrays)
 - Mean of Array After Removing Some Elements
   - Site: [LeetCode.com](https://leetcode.com/problems/mean-of-array-after-removing-some-elements/)
-  - Code: [`find_distance_value_between_two_arrays`](src/mean_of_array_after_removing_some_elements)
+  - Code: [`mean_of_array_after_removing_some_elements`](src/mean_of_array_after_removing_some_elements)
